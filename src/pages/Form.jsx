@@ -1,6 +1,6 @@
 import Card from "../components/Card";
-import imgSiblingFKTP from "../assets/imgSiblingFKTP.png";
-import imgSiblingFKRTL from "../assets/imgSiblingFKRTL.png";
+import imgSiblingFKTP from "../assets/imgSiblingFktp.png";
+import imgSiblingFKRTL from "../assets/imgSiblingFkrtl.png";
 import imgVisit from "../assets/imgVisit.png";
 
 const Form = () => {
