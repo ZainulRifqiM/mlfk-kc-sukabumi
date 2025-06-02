@@ -7,17 +7,17 @@ const Form = () => {
   const dataForm = [
     {
       judul: "Sibling FKTP",
-      link: "https://www.google.com/",
+      link: "https://forms.office.com/Pages/ResponsePage.aspx?id=trHd22W75kaGi_xv57vs9rJ2lkX5sHtEg7_58XRmTOdUQ1ZDVlFBRU03VFBMVzEwVEFPVFBKTlVUMy4u&origin=QRCode",
       imgSrc: imgSiblingFKTP, // Replace with actual image source
     },
     {
       judul: "Sibling FKRTL",
-      link: "https://www.google.com/",
+      link: "https://forms.office.com/Pages/ResponsePage.aspx?id=trHd22W75kaGi_xv57vs9rJ2lkX5sHtEg7_58XRmTOdURjBUSFM1MkFVNks0OFdTMEFFQkFINjIxVC4u&origin=QRCode",
       imgSrc: imgSiblingFKRTL, // Replace with actual image source
     },
     {
       judul: "Customer Visit",
-      link: "https://www.google.com/",
+      link: "https://forms.office.com/pages/responsepage.aspx?id=trHd22W75kaGi_xv57vs9ivOoGaP6BBApt38yPuZHilUNjRVVjM4QTlPUUNFQllQWE9IUTZUUENXUC4u&route=shorturl",
       imgSrc: imgVisit, // Replace with actual image source
     },
   ];
