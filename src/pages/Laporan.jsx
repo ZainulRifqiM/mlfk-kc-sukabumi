@@ -26,10 +26,10 @@ const Laporan = () => {
   return (
     <>
       <div
-        className="md:px-8 space-y-16 p-4 text-center content-center max-w-screen-xl w-full mx-auto  h-screen text-textColor"
+        className="md:px-8 space-y-20 p-4 text-center max-w-screen-xl w-full mx-auto  h-screen text-textColor"
         id="home"
       >
-        <div className="">
+        <div className="mt-32">
           <h3 className="font-semibold text-xl">
             Selamat datang di Menu Laporan!
           </h3>

@@ -23,10 +23,10 @@ const Form = () => {
   ];
   return (
     <div
-      className="md:px-8 p-4 text-center content-center max-w-screen-xl w-full mx-auto  h-screen text-textColor"
+      className="md:px-8 p-4 text-center space-y-20 max-w-screen-xl w-full mx-auto  h-screen text-textColor"
       id="home"
     >
-      <div>
+      <div className="mt-32">
         <h3 className="font-semibold text-xl">
           Selamat datang di Menu Form Laporan Kunjungan!
         </h3>
