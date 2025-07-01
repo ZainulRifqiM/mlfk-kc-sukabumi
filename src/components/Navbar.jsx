@@ -38,7 +38,7 @@ const Navbar = () => {
             </ul>
           </div>
           <button
-            className="hidden md:flex py-1 px-2 bg-primaryColor text-white rounded-md hover:font-medium hover:bg-secondaryColor transition duration-300 ease-in-out"
+            className="hidden md:flex py-1 px-2 bg-primaryColor text-[#333] rounded-md hover:font-medium hover:bg-secondaryColor transition duration-300 ease-in-out"
             onClick={() => {
               window.open(
                 "https://bpjskesehatano365-my.sharepoint.com/:x:/g/personal/marina_devi_bpjs-kesehatan_go_id/EQVgwy5EjlFGh0zva1ZHF8sBdQBKc2grNs8oiESh8_wWfw?e=7DKZcQ",

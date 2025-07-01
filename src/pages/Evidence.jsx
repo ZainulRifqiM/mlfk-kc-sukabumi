@@ -1,27 +1,72 @@
 import React from "react";
+import { useState } from "react";
 import cianjur from "../assets/cianjur.jpg";
 import sukabumi from "../assets/sukabumi.jpg";
 import kabsukabumi from "../assets/kabsukabumi.jpg";
 import Card from "../components/Card";
+import Toogle from "../components/Toogle";
+import CardEvidence from "../components/CardEvidence";
 
 const Evidence = () => {
   const dataEvidence = [
     {
-      judul: "Kota Sukabumi",
-      link: "https://forms.office.com/Pages/ResponsePage.aspx?id=trHd22W75kaGi_xv57vs9rJ2lkX5sHtEg7_58XRmTOdUQ1ZDVlFBRU03VFBMVzEwVEFPVFBKTlVUMy4u&origin=QRCode",
-      imgSrc: sukabumi, // Replace with actual image source
+      id: 1,
+      faskes: "FKTP",
+      wilayah: [
+        {
+          id: "fktp1",
+          judul: "FKTP Kota Sukabumi",
+          link: "https://forms.office.com/Pages/ResponsePage.aspx?id=trHd22W75kaGi_xv57vs9rJ2lkX5sHtEg7_58XRmTOdUQ1ZDVlFBRU03VFBMVzEwVEFPVFBKTlVUMy4u&origin=QRCode",
+          imgSrc: sukabumi, // Replace with actual image source
+        },
+        {
+          id: "fktp2",
+          judul: "FKTP Kab Sukabumi",
+          link: "https://forms.office.com/Pages/ResponsePage.aspx?id=trHd22W75kaGi_xv57vs9rJ2lkX5sHtEg7_58XRmTOdURjBUSFM1MkFVNks0OFdTMEFFQkFINjIxVC4u&origin=QRCode",
+          imgSrc: kabsukabumi, // Replace with actual image source
+        },
+        {
+          id: "fktp3",
+          judul: "FKTP Kab Cianjur",
+          link: "https://forms.office.com/pages/responsepage.aspx?id=trHd22W75kaGi_xv57vs9ivOoGaP6BBApt38yPuZHilUNjRVVjM4QTlPUUNFQllQWE9IUTZUUENXUC4u&route=shorturl",
+          imgSrc: cianjur, // Replace with actual image source
+        },
+      ],
     },
+
     {
-      judul: "Kab Sukabumi",
-      link: "https://forms.office.com/Pages/ResponsePage.aspx?id=trHd22W75kaGi_xv57vs9rJ2lkX5sHtEg7_58XRmTOdURjBUSFM1MkFVNks0OFdTMEFFQkFINjIxVC4u&origin=QRCode",
-      imgSrc: kabsukabumi, // Replace with actual image source
-    },
-    {
-      judul: "Kab Cianjur",
-      link: "https://forms.office.com/pages/responsepage.aspx?id=trHd22W75kaGi_xv57vs9ivOoGaP6BBApt38yPuZHilUNjRVVjM4QTlPUUNFQllQWE9IUTZUUENXUC4u&route=shorturl",
-      imgSrc: cianjur, // Replace with actual image source
+      id: 2,
+      faskes: "FKRTL",
+      wilayah: [
+        {
+          id: "fkrtl1",
+          judul: "FKRTL Kota Sukabumi",
+          link: "https://forms.office.com/Pages/ResponsePage.aspx?id=trHd22W75kaGi_xv57vs9rJ2lkX5sHtEg7_58XRmTOdUQ1ZDVlFBRU03VFBMVzEwVEFPVFBKTlVUMy4u&origin=QRCode",
+          imgSrc: sukabumi, // Replace with actual image source
+        },
+        {
+          id: "fkrtl2",
+          judul: "FKRTL Kab Sukabumi",
+          link: "https://forms.office.com/Pages/ResponsePage.aspx?id=trHd22W75kaGi_xv57vs9rJ2lkX5sHtEg7_58XRmTOdURjBUSFM1MkFVNks0OFdTMEFFQkFINjIxVC4u&origin=QRCode",
+          imgSrc: kabsukabumi, // Replace with actual image source
+        },
+        {
+          id: "fkrtl3",
+          judul: "FKRTL Kab Cianjur",
+          link: "https://forms.office.com/pages/responsepage.aspx?id=trHd22W75kaGi_xv57vs9ivOoGaP6BBApt38yPuZHilUNjRVVjM4QTlPUUNFQllQWE9IUTZUUENXUC4u&route=shorturl",
+          imgSrc: cianjur, // Replace with actual image source
+        },
+      ],
     },
   ];
+
+  const [selected, setSelected] = useState(dataEvidence[0]);
+  // console.log(`data awal`, dataEvidence);
+  const handleClick = (data) => {
+    setSelected(data);
+    // console.log(selected);
+  };
+
   return (
     //
     <div
@@ -39,16 +84,18 @@ const Evidence = () => {
           kesehatan.
         </p>
       </div>
-      <div></div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center mt-20">
-        {dataEvidence.map((ev) => (
-          <Card
-            key={ev.judul}
-            judul={ev.judul}
-            link={ev.link}
-            imgSrc={ev.imgSrc}
+      <div className="flex justify-center gap-4">
+        {dataEvidence.map((data) => (
+          <Toogle
+            key={data.id}
+            title={data.faskes}
+            isActive={selected.id === data.id}
+            onClick={() => handleClick(data)}
           />
         ))}
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center mt-20">
+        <CardEvidence faskes={selected.wilayah} />
       </div>
     </div>
   );
